@@ -70,4 +70,4 @@ model.fit(X_train, y_train, epochs=10, validation_split=0.1)
 loss, accuracy = model.evaluate(X_test, y_test)
 print(f'Accuracy: {accuracy:.2f}')
 
-model.save('mlp_model.h5')
+model.save('mlp_model_2.h5')

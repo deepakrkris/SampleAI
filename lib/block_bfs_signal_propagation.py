@@ -16,8 +16,6 @@ def count_walls_between_blocks(grid, block_size, block_x1, block_y1, block_x2, b
                 walls += 1
     return walls
 
-
-
 def block_bfs_propagate(grid, block_size, start_block_x, start_block_y):
     rows, cols = grid.shape
     block_rows, block_cols = rows // block_size, cols // block_size

@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 import easyocr
 
-def convert_image_to_grayscale(file_name = "18_1.jpg", base = 'source/') :
+def convert_image_to_grayscale(file_name = "18_1.jpg", base = '../floor_plans/images/') :
   image = cv2.imread(base + file_name)
 
   gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -43,8 +43,8 @@ def convert_image_to_grayscale(file_name = "18_1.jpg", base = 'source/') :
 
   return image
 
-count = 100
-for i in range(1, 31) :
-  image_array = convert_image_to_grayscale('18_' + str(i) + '.jpg')
+count = 301
+for i in range(1, 2) :
+  image_array = convert_image_to_grayscale('75_20.jpg')
   cv2.imwrite('images/' + str(count) + '.png', image_array)
   count += 1

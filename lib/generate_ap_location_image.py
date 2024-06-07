@@ -22,10 +22,12 @@ def grid_to_image(grid, colormap="viridis", scale_factor=2, icon_position=(0, 0)
       PIL.Image: The created image object.
   """
 
-  icon_path="lib/google_loc_icon_2.png"
+  icon_path="lib/google_loc_icon_2.png" 
 
   # Ensure grid is a NumPy array
   grid = np.array(grid)
+
+  rows, _ = grid.shape
 
   # Rescale values to the range [0, 1] for colormap application
   grid_scaled = (grid - np.min(grid)) / (np.max(grid) - np.min(grid))
@@ -59,8 +61,8 @@ def grid_to_image(grid, colormap="viridis", scale_factor=2, icon_position=(0, 0)
       # Calculate the top-left corner coordinates for the icon placement
       grid_width, grid_height = image.size
       x_pos, y_pos = icon_position
-      x_image = x_pos * (grid_width // 100)
-      y_image = y_pos * (grid_height // 100)
+      x_image = x_pos * (grid_width // rows)
+      y_image = y_pos * (grid_height // rows)
 
       adjusted_x = max(0, min(x_image, grid_width - icon_width))  # Clamp x position
       adjusted_y = max(0, min(y_image, grid_height - icon_height))  # Clamp y position
