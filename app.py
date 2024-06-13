@@ -186,4 +186,4 @@ def cnn_topo_m2(file_name):
     return send_file(image_bytes, mimetype='image/gif')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='localhost', port=8000, debug=True)

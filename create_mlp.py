@@ -4,7 +4,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Flatten
 from tensorflow.keras.optimizers import Adam
 
-from lib.create_grid import createGrid
+from lib.create_grid import createGrid_m2 as createGrid
 from lib.block_bfs_signal_propagation import find_best_block
 
 floor_plans = []
