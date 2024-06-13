@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "62fa676e-308b-4ff4-bb59-005b43999308",
+		"name": "Ruckathon2024",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32698072"
+	},
+	"item": [
+		{
+			"name": "M1_BFS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(responseBody, true)",
+							"tests[\"body\"] = responseBody"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"floor_plan_image\", pm.environment.get(\"floor_plan_image\"));"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/topo/m1/{{floor_plan_image}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"topo",
+						"m1",
+						"{{floor_plan_image}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "M1_MLP",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"floor_plan_image\", pm.environment.get(\"floor_plan_image\"));"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(responseBody, true)",
+							"tests[\"body\"] = responseBody"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/mlp_topo/m1/{{floor_plan_image}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"mlp_topo",
+						"m1",
+						"{{floor_plan_image}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "M1_CNN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(responseBody, true)",
+							"tests[\"body\"] = responseBody"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"floor_plan_image\", pm.environment.get(\"floor_plan_image\"));"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/cnn_topo/m1/{{floor_plan_image}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cnn_topo",
+						"m1",
+						"{{floor_plan_image}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "M2_BFS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(responseBody, true)",
+							"tests[\"body\"] = responseBody"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"floor_plan_image\", pm.environment.get(\"floor_plan_image\"));"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/topo/m2/{{floor_plan_image}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"topo",
+						"m2",
+						"{{floor_plan_image}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "M2_MLP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(responseBody, true)",
+							"tests[\"body\"] = responseBody"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"floor_plan_image\", pm.environment.get(\"floor_plan_image\"));"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/mlp_topo/m2/{{floor_plan_image}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"mlp_topo",
+						"m2",
+						"{{floor_plan_image}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "M2_CNN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(responseBody, true)",
+							"tests[\"body\"] = responseBody"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"floor_plan_image\", pm.environment.get(\"floor_plan_image\"));"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/cnn_topo/m2/{{floor_plan_image}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cnn_topo",
+						"m2",
+						"{{floor_plan_image}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Image",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"pm.collectionVariables.set(\"floor_plan_image\", \"88_20.jpg\");",
+					"//pm.collectionVariables.set(\"floor_plan_image\", \"75_20.jpg\");",
+					"",
+					"//pm.collectionVariables.set(\"floor_plan_image\", \"88_30.jpg\");",
+					"//pm.collectionVariables.set(\"floor_plan_image\", \"72_22.jpg\");",
+					"//pm.collectionVariables.set(\"floor_plan_image\", \"89_19.jpg\");",
+					"",
+					"//pm.collectionVariables.set(\"floor_plan_image\", \"91_30.jpg\"); ",
+					"//pm.collectionVariables.set(\"floor_plan_image\", \"70_9.jpg\");",
+					"//pm.collectionVariables.set(\"floor_plan_image\", \"1.png\");",
+					"//pm.collectionVariables.set(\"floor_plan_image\", \"2.png\");",
+					"//pm.collectionVariables.set(\"floor_plan_image\", \"3.png\");",
+					"//pm.collectionVariables.set(\"floor_plan_image\", \"4.png\");",
+					"//pm.collectionVariables.set(\"floor_plan_image\", \"5.png\");",
+					"//pm.collectionVariables.set(\"floor_plan_image\", \"6.png\");"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "floor_plan_image",
+			"value": "88_30.jpg",
+			"type": "string"
+		}
+	]
+}
